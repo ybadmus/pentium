@@ -1,0 +1,8 @@
+<div class="galleryContainer">
+    <div class="gallery" *ngFor="let img of images.results">
+        <a href="#">
+          <img src="{{ img.image }}" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">{{img.title}}</div>
+    </div>
+</div>

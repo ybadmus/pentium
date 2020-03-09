@@ -1,0 +1,37 @@
+<main>
+    <section class="form-section">
+        <header class="section-header">
+            <span class="form-header">Log in to your account</span>
+            <span class="form-description"><div class="">One account for everything Nice, including us.<a class="learn-more">Learn more</a></div></span>
+        </header>
+        <form novalidate [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+            <ul>
+                <li>
+                    <label for="email">Email address</label>
+                    <input formControlName="email"  type="email" id="email" name="email" />
+                </li>
+                <li>
+                    <label for="password">Password</label>
+                    <input formControlName="password" type="password" id="password" name="password" />
+                </li>
+                <li class="button-li">
+                    <button class="signup-button" type="submit" [disabled]="signinForm.invalid">Log In</button>
+                </li>
+            </ul>
+        </form>
+        <footer>
+            <div class="footer-description">
+                <span>By clicking Log In, you agree to our<br> 
+                    <a href="https://www.mint.com/terms" target="_blank">Terms</a>
+                    <span>&nbsp;and have read and acknowledge our&nbsp;</span>
+                    <a href="https://security.intuit.com/privacy" target="_blank">Privacy Statement</a>
+                </span>
+            </div>
+        </footer>
+    </section>
+    <section>
+        <div class="form-footer">
+            <p>Invisible reCAPTCHA by Google <a>Privacy Policy</a> and <a>Terms of Use</a>.</p>
+        </div>
+    </section>
+</main>
